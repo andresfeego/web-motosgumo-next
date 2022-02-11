@@ -11,7 +11,7 @@ const AdminMarcas = () => {
     const [listaMarcas, setListaMarcas ] =  useState([])
     
    const getMarcas = async () => {
-        const resMarcas = await fetch('185.125.78.217:3020/responseMono/marcas')
+        const resMarcas = await fetch('http://www.feegosystem.com:3020/responseMono/marcas')
         const marcasJson = await resMarcas.json()
         setListaMarcas(marcasJson)
     }
