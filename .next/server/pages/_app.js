@@ -90,7 +90,7 @@ let rootReducer = (0,external_redux_namespaceObject.combineReducers)({
   categoria: categoriaReducer,
   lblCategoria: lblCategoriaReducer
 });
-/* harmony default export */ var localStore = ((0,external_redux_namespaceObject.createStore)(rootReducer));
+/* harmony default export */ var LocalStore = ((0,external_redux_namespaceObject.createStore)(rootReducer));
 // EXTERNAL MODULE: external "react-toastify"
 var external_react_toastify_ = __webpack_require__(34);
 ;// CONCATENATED MODULE: ./pages/_app.js
