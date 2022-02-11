@@ -1,7 +1,7 @@
 import "./stylesGlobal.scss"
 import React from 'react'
 import {Provider} from 'react-redux'
-import LocalStore from '../components/Inicialized/LocalStore'
+import LocalStore from '../Components/Inicialized/LocalStore'
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
