@@ -3,7 +3,7 @@ import MotorcycleIcon from '@material-ui/icons/Motorcycle';
 import ListIcon from '@material-ui/icons/List';
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
-
+import Head from 'next/head'
 
 import AdminItems from '../Components/AdminItems/AdminItems';
 import { useState } from 'react';
@@ -35,6 +35,11 @@ const Index = () => {
 
     return (
         <div className={styles.contenedor}>
+            <Head lang="ES">
+                <title>GUMO | Administración</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
+
             <div className={styles.arriba}>
                 <img alt="" src={require("../scrAppServer/images/fondo_header.png")} className={styles.fondo_header} />
                 <img alt="" src={require("../scrAppServer/images/logo_Gumo.png")} className={styles.logo} />
@@ -82,6 +87,7 @@ const Index = () => {
 
             </div>
         </div>
+
     )
 
 }

@@ -9,20 +9,20 @@ import { Slide, Zoom, Flip, Bounce } from 'react-toastify';
 
 const App = ({Component, pageProps }) => (
   <React.Fragment>
-      <ToastContainer 
-      position="top-left"
-      autoClose={3000}
-      hideProgressBar={false}
-      newestOnTop
-      closeOnClick
-      transition={Flip}
-      rtl={false}
-      pauseOnVisibilityChange
-      draggable
-      pauseOnHover/>
-    <Provider store={LocalStore}>
-      <Component {...pageProps }/>
-    </Provider>
+        <ToastContainer 
+        position="top-left"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        transition={Flip}
+        rtl={false}
+        pauseOnVisibilityChange
+        draggable
+        pauseOnHover/>
+      <Provider store={LocalStore}>
+        <Component {...pageProps }/>
+      </Provider>
 
   </React.Fragment>
 )
