@@ -7,11 +7,13 @@
 }
 
 .arriba{
-    background-color: $primary;
+    background-color: $primaryDark;
     height: 7vw;
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .abajo{
@@ -24,18 +26,39 @@
 .menu{
     width: 20vw;
     height: 100%;
-    background-color: $primary;
+    position: relative;
+    background: rgba(24,24,24,0.8);
+}
+
+.menu>.fondo{
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5) url('../scrAppServer/images/fondo_header.png');
+    background-size: 28vw;
+    background-position-x: -4.2vw;
+    background-position-y: -0.15vw;
+    opacity: 0.5;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 20vw;
 }
 
 .arriba>.logo{
-    height: 6vw;
+    height: 5vw;
 }
+
+.arriba>.fondo_header{
+    height: 100%;
+    position: absolute;
+    left: -5.5vw;
+}
+
+
 .contenido{
     flex: 1;
 }
 
 .menu>.menuItem{
-    background-color: $primary;
     height: 2vw;
     display: flex;
     align-items: center;
@@ -59,4 +82,5 @@
     margin-left: 1vw;
     padding-left: 1vw;
     align-items: center;
+    color: #fff;
 }

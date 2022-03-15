@@ -36,12 +36,14 @@ const Index = () => {
     return (
         <div className={styles.contenedor}>
             <div className={styles.arriba}>
-                <img alt="" src={require("../scrAppServer/images/logo_mono.png")} className={styles.logo} />
+                <img alt="" src={require("../scrAppServer/images/fondo_header.png")} className={styles.fondo_header} />
+                <img alt="" src={require("../scrAppServer/images/logo_Gumo.png")} className={styles.logo} />
                 
             </div>
 
             <div className={styles.abajo}>
                 <div className={styles.menu}>
+                    <div className={styles.fondo} />
                     
                     <div className={styles.menuItem} onClick={() => setMenuStatus(1)}>
                         <div className={styles.iconMenuItem}>
