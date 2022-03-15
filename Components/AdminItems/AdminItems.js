@@ -22,13 +22,13 @@ const AdminItems = () => {
 
 
     const getItems = async () => {
-        const resItems = await fetch('http://localhost:3020/responseMono/items')
+        const resItems = await fetch(process.env.HOST_NAME + '/items')
         const itemsJson = await resItems.json()
         setListaItems(itemsJson)
     }
 
     const getsubItems = async () => {
-        const resSubitems = await fetch('http://localhost:3020/responseMono/subitems/' + idItem)
+        const resSubitems = await fetch(process.env.HOST_NAME + '/subitems/' + idItem)
         const subitemsJson = await resSubitems.json()
         setSubitems(subitemsJson)
     }
@@ -76,7 +76,7 @@ export async function getServerSideProps(ctx) {
     console.log("serversidepropsindex")
     var props = { props: {} }
 
-    const resSlides = await fetch('http://localhost:3020/responseMono/items')
+    const resSlides = await fetch(process.env.HOST_NAME + '/items')
     const slidesJson = await resSlides.json()
     props.props = { items: slidesJson }
 

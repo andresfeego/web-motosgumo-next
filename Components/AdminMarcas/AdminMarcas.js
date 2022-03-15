@@ -11,7 +11,7 @@ const AdminMarcas = () => {
     const [listaMarcas, setListaMarcas ] =  useState([])
     //https://stackoverflow.com/questions/11744975/enabling-https-on-express-js
    const getMarcas = async () => {
-        const resMarcas = await fetch('https://www.feegosystem.com:8443/responseMono/marcas')
+        const resMarcas = await fetch(process.env.HOST_NAME + '/marcas')
         const marcasJson = await resMarcas.json()
         setListaMarcas(marcasJson)
     }

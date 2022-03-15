@@ -125,7 +125,7 @@ const AgregarMarca = (props) => {
     function guardarImagen() {
         return new Promise((resolve, reject) => {
             superagent
-                .post('http://localhost:3020/responseMono/uploadLogoMarca/' + nombre)
+                .post(process.env.HOST_NAME + '/uploadLogoMarca/' + nombre)
                 .attach('image', imagen)
                 .set('accept', 'json')
                 .end((err, res) => {
@@ -148,7 +148,7 @@ const AgregarMarca = (props) => {
             guardarImagen().then((url) => {
 
                 superagent
-                    .post('http://localhost:3020/responseMono/crearMarca')
+                    .post(process.env.HOST_NAME + '/crearMarca')
                     .send({ nombre: nombre, resena: resena, urlLogo: url, colorUno: colorUno.hex, colorDos: colorDos.hex, colorTres: colorTres.hex }) // sends a JSON post body
                     .set('X-API-Key', 'foobar')
                     .set('accept', 'json')

@@ -54,7 +54,7 @@ const AgregarItem = (props) => {
         return new Promise(async (resolve, reject) => {
 
             superagent
-                .post('http://localhost:3020/responseMono/crearItem')
+                .post(process.env.HOST_NAME + '/crearItem')
                 .send({ nombre: nombre, descripcion: descripcion }) // sends a JSON post body
                 .set('X-API-Key', 'foobar')
                 .set('accept', 'json')

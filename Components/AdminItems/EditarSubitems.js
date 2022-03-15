@@ -64,7 +64,7 @@ const EditarSubitems = (props) => {
         return new Promise((resolve, reject) => {
 
             superagent
-                .post('http://localhost:3020/responseMono/editarSubitem')
+                .post(process.env.HOST_NAME + '/editarSubitem')
                 .send({ id: id, valor: valor, puntaje: puntaje}) // sends a JSON post body
                 .set('X-API-Key', 'foobar')
                 .set('accept', 'json')

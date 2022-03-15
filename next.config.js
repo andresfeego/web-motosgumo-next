@@ -12,6 +12,10 @@ module.exports = {
   },
   future: {
     webpack5: true,
+  },
+  env: {
+    //HOST_NAME: 'http://localhost:3020/responseMono',
+    HOST_NAME: 'https://feegosystem.com:8443/responseMono',
   }
   
 }

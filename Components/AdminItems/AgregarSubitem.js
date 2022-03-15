@@ -61,7 +61,7 @@ const AgregarSubitem = (props) => {
         return new Promise((resolve, reject) => {
 
             superagent
-                .post('http://localhost:3020/responseMono/crearSubitem')
+                .post(process.env.HOST_NAME + '/crearSubitem')
                 .send({ valor: valor, puntaje: puntaje, idItem: idItem }) // sends a JSON post body
                 .set('X-API-Key', 'foobar')
                 .set('accept', 'json')
